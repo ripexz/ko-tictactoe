@@ -1,0 +1,62 @@
+body {
+	font-family: Helvetica, Arial, sans-serif;
+}
+tr, td {
+	border: 1px solid black;
+}
+tr {
+	width: 300px;
+	height: 100px;
+}
+td {
+	width: 100px;
+	height: 100px;
+}
+table {
+	text-align: center;
+	vertical-align: center;
+	font-size: 60px;
+	cursor: pointer;
+}
+p {
+	font-size: 20px;
+}
+.p1	{
+	color: red;
+}
+.p2 {
+	color: blue;
+}
+.line {
+	position: absolute;
+	left: 20px;;
+	top: 90px;
+	display: none;
+}
+#a1 {
+	top: 80px;
+}
+#a2 {
+	top: 186px;
+}
+#a3 {
+	top: 292px;
+}
+#d1 {
+	left: 11px;
+}
+#d2 {
+	left: 117px;
+}
+#d3 {
+	left: 223px;
+}
+.shown {
+	display: block;
+}
+.clicked {
+	color: black;
+}
+.preview {
+	color: grey;
+}

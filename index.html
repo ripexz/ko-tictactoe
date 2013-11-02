@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Tic Tac Toe</title>
+		<meta charset="utf-8" />
+		<script type="text/javascript" src="knockout-2.2.1.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<link rel="stylesheet" href="css/main.css" />
+	</head>
+	<body>
+		<h1>Tic Tac Toe</h1>
+		<table id="game">
+			<img data-bind="css: line() == 'rtl' ? 'shown' : ''" class="line" id="rtl" src="images/rtol.png" />
+			<img data-bind="css: line() == 'ltr' ? 'shown' : ''" class="line" id="ltr" src="images/ltor.png" />
+			<img data-bind="css: line() == 'a1' ? 'shown' : ''" class="line" id="a1" src="images/across.png" />
+			<img data-bind="css: line() == 'a2' ? 'shown' : ''" class="line" id="a2" src="images/across.png" />
+			<img data-bind="css: line() == 'a3' ? 'shown' : ''" class="line" id="a3" src="images/across.png" />
+			<img data-bind="css: line() == 'd1' ? 'shown' : ''" class="line" id="d1" src="images/down.png" />
+			<img data-bind="css: line() == 'd2' ? 'shown' : ''" class="line" id="d2" src="images/down.png" />
+			<img data-bind="css: line() == 'd3' ? 'shown' : ''" class="line" id="d3" src="images/down.png" />
+			<tbody data-bind="foreach: moveData">
+				<tr data-bind="foreach: row">
+					<td data-bind="text: content(), click: $root.makeMove, event: { mouseover: $root.showMove, mouseout: $root.hideMove }, css: clicked() ? 'clicked' : 'preview'">
+				</tr>
+			</tbody>
+		</table>
+		<p id="turn" data-bind="text: (turn() == 1 ? $root.p1.name : $root.p2.name) + '\'s Turn', css: turn() == 1 ? 'p1' : 'p2'"></p>
+		
+		<!-- Make sure ko bindings are applied after HTML -->
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>
